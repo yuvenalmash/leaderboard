@@ -20,5 +20,16 @@ main {
 
 button {
   height: 25px;
+  width: fit-content;
   box-shadow: 3px 3px;
+}
+
+#addScores {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#addScores input {
+  width: 170px;
 }
