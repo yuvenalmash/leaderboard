@@ -1,0 +1,24 @@
+main {
+  display: grid;
+}
+
+#recentScores {
+  display: flex;
+  flex-direction: column;
+}
+
+#recentScores div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#recentScores ul {
+  border: 2px solid #000;
+  min-height: 200px;
+}
+
+button {
+  height: 25px;
+  box-shadow: 3px 3px;
+}
