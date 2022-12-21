@@ -12,11 +12,20 @@
         <h1>Leaderboard</h1>
     </header>
     <main>
-        <section>
-            <h2>Recent Scores</h2>
+        <section id="recentScores">
+            <div>
+                <h2>Recent Scores</h2>
+                <button id="refreshBtn" type="button">Refresh</button>
+            </div>
+
+            <ul id="scoreList"></ul>
         </section>
-        <section>
+
+        <section id="addScores">
             <h2>Add your score</h2>
+            <input id="inputName" type="text">
+            <input id="inputScore" type="number" name="inputScore" id="">
+            <button id="submitBtn" type="submit">Submit</button>
         </section>
     </main>
 
