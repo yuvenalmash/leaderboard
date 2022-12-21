@@ -17,7 +17,6 @@ const listBoard = () => {
   }
   const ul = document.getElementById('scoreList');
   list.forEach((element) => {
-    console.log(element);
     const li = document.createElement('li');
     li.innerHTML = `${element.name}: ${element.score}`;
     ul.appendChild(li);
