@@ -24,16 +24,14 @@ const clearBoard = () => {
 //   });
 // };
 
-const listBoard = () => {
-  clearBoard();
-  getScores().then((list) => {
-    const ul = document.getElementById("scoreList");
-
-    list.forEach((element) => {
-      const li = document.createElement("li");
-      li.innerHTML = `${element.name}: ${element.score}`;
-      ul.appendChild(li);
-    });
+const listBoard = async () => {
+  const ul = document.getElementById("scoreList");
+  const list = await(getScores())
+  console.log(list)
+  list.forEach((element) => {
+    const li = document.createElement("li");
+    li.innerHTML = `${element.name}: ${element.score}`;
+    ul.appendChild(li);
   });
 };
 
@@ -60,4 +58,3 @@ submitBtn.addEventListener("click", () => {
 
 // localStorage.setItem('allEntries', JSON.stringify([]))
 listBoard();
-getScores();
