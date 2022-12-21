@@ -16,14 +16,18 @@ export const createGame = () => {
 };
 // game ID = RnHoB3QclAa6ZdcM46b2 
 
-export const getScores = () => {
-  fetch(baseURL+"games/RnHoB3QclAa6ZdcM46b2/scores")
-  .then(response => response.json())
-  //.then(data => listObj = data)
-  //.then(()=> console.log(listObj))
-  .then(responseData => {
-    console.log(responseData)
-    return responseData
-  })
-  .catch(error => console.warn(error));
+// export const getScores = () => {
+//   fetch(baseURL+"games/RnHoB3QclAa6ZdcM46b2/scores")
+//   .then(response => response.json())
+//   .then(responseData => {
+//     console.log(responseData)
+//     return responseData
+//   })
+//   .catch(error => console.warn(error));
+// }
+
+export const getScores = async () => {
+  const response = await fetch(baseURL+"games/RnHoB3QclAa6ZdcM46b2/scores")
+  const responseData = await response.json()
+  return responseData.result
 }
