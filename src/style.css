@@ -1,6 +1,15 @@
-body {
-  margin: 10px 20%;
+* {
+  margin: 0%;
+  padding: 0%;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px 20%;
+}
+
 main {
   display: grid;
   grid-template-columns: auto auto;
@@ -10,6 +19,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 12px;
 }
 
 #recentScores div {
@@ -21,7 +31,16 @@ main {
 #recentScores ul {
   border: 2px solid #000;
   min-height: 200px;
-  width: 50%;
+  width: 70%;
+  list-style: none;
+}
+
+#recentScores ul li {
+  background: rgb(247, 247, 247);
+}
+
+#recentScores ul li:nth-child(odd) {
+  background: rgb(192, 192, 192);
 }
 
 button {
