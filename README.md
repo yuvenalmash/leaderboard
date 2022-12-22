@@ -9,7 +9,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [� Getting Started ](#-getting-started-)
+  - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Install](#install)
@@ -40,7 +40,7 @@
 
 ### Key Features <a name="key-features"></a>
 
-- **local storage**
+- **Uses [leaderboard API](https://www.notion.so/Leaderboard-API-service-24c0c3c116974ac49488d4eb0267ade3)**
 
 <!-- <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

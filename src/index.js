@@ -1,4 +1,5 @@
 import './style.css';
+import { getScores, postScores } from './modules/game.js';
 
 const refreshBtn = document.getElementById('refreshBtn');
 const submitBtn = document.getElementById('submitBtn');
@@ -8,17 +9,14 @@ const clearBoard = () => {
   ul.innerHTML = '';
 };
 
-const listBoard = () => {
+const listBoard = async () => {
   clearBoard();
-  let list = JSON.parse(localStorage.getItem('allEntries'));
-  if (list === null) {
-    list = [];
-    localStorage.setItem('allEntries', JSON.stringify(list));
-  }
   const ul = document.getElementById('scoreList');
+  const list = await getScores();
+  list.sort((a, b) => b.score - a.score);
   list.forEach((element) => {
     const li = document.createElement('li');
-    li.innerHTML = `${element.name}: ${element.score}`;
+    li.innerHTML = `${element.user}: ${element.score}`;
     ul.appendChild(li);
   });
 };
@@ -27,22 +25,14 @@ refreshBtn.addEventListener('click', () => {
   listBoard();
 });
 
-submitBtn.addEventListener('click', () => {
-  const name = document.getElementById('inputName');
+submitBtn.addEventListener('click', async () => {
+  const user = document.getElementById('inputUser');
   const score = document.getElementById('inputScore');
-  const list = JSON.parse(localStorage.getItem('allEntries'));
-  list.push({
-    name: `${name.value}`,
-    score: `${score.value}`,
-  });
-  list.sort((a, b) => b.score - a.score);
-  localStorage.setItem('allEntries', JSON.stringify(list));
+  await postScores(user.value, score.value);
   listBoard();
-
   // clear inputs
-  name.value = '';
+  user.value = '';
   score.value = '';
 });
 
-// localStorage.setItem('allEntries', JSON.stringify([]))
 listBoard();
