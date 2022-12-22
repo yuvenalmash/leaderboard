@@ -47,7 +47,6 @@ main {
 
 #recentScores ul li:nth-child(odd) {
   background: lightblue;
-  
 }
 
 button {
@@ -71,7 +70,7 @@ button {
   margin-left: 100px;
 }
 
-@media (max-width: 882px){
+@media (max-width: 882px) {
   main {
     display: grid;
     grid-template-columns: auto;
