@@ -71,15 +71,6 @@ button {
   margin-left: 100px;
 }
 
-/* input[data-state="invalid"] {
-  border-color: hsl(0, 76%, 50%);
-} */
-
-#alert{
-  display: none;
-  color: red;
-}
-
 @media (max-width: 882px){
   main {
     display: grid;
