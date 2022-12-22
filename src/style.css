@@ -1,13 +1,18 @@
 * {
   margin: 0%;
   padding: 0%;
+  font-family: sans-serif;
+  color: rgb(24, 75, 92);
 }
 
 body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  border: 2px solid #000;
+  box-shadow: 10px 10px 10px lightblue;
   margin: 20px 20%;
+  padding: 20px;
 }
 
 main {
@@ -37,10 +42,12 @@ main {
 
 #recentScores ul li {
   background: rgb(247, 247, 247);
+  padding: 2px 12px;
 }
 
 #recentScores ul li:nth-child(odd) {
-  background: rgb(192, 192, 192);
+  background: lightblue;
+  
 }
 
 button {
@@ -62,4 +69,21 @@ button {
 
 #addScores button {
   margin-left: 100px;
+}
+
+/* input[data-state="invalid"] {
+  border-color: hsl(0, 76%, 50%);
+} */
+
+#alert{
+  display: none;
+  color: red;
+}
+
+@media (max-width: 882px){
+  main {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 20px;
+  }
 }
